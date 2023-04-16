@@ -1,5 +1,6 @@
 import React from 'react'
-import Dice, { nanoid} from './components/Dice'
+import Dice from './components/Dice'
+import { v4 as uuidv4 } from 'uuid';
 
 // import Confetti from 'react-confetti'
 
@@ -57,7 +58,7 @@ function App() {
   function allNewDice(){
     const newArray = []
     for (let i = 0; i < 10; i++){
-      newArray.push({id: nanoid(),value:(Math.floor(Math.random() * 6) + 1), isHeld:false})
+      newArray.push({id:uuidv4(),value:(Math.floor(Math.random() * 6) + 1), isHeld:false})
     }
     return newArray
   }
