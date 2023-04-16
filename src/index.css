@@ -24,7 +24,7 @@ body{
   max-width: 660px;
   width: 100%;
   margin: 0 auto;
-  height: 50vh; 
+  height: 40vh; 
   padding: 32px;
   display: grid;
   grid-template-columns: repeat(5,1fr);

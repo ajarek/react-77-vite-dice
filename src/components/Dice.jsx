@@ -1,7 +1,7 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
-function Dice(props) {
+const Dice=({value, holdDice, isHeld})=> {
   const faces = [
     [<div key={uuidv4()} className="dot center middle"></div>],
 
@@ -30,9 +30,9 @@ function Dice(props) {
     <div key={uuidv4()} className="dot bottom left"></div>,
     <div key={uuidv4()} className="dot bottom right"></div>],
   ]
-  let face = faces[props.value - 1]
+  let face = faces[value - 1]
   return (
-    <div onClick={props.holdDice} className={props.isHeld === true ? 'dice held' : 'dice'}>
+    <div onClick={holdDice} className={isHeld === true ? 'dice held' : 'dice'}>
       {face}
     </div>
   )
