@@ -34,20 +34,23 @@ body{
 .dice{
   width: 100px;
   height: 100px;
- 
+  background-color: #fff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   place-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
 }
 .dot{
-  background-color: black;
+  background-color: #000;
   border-radius: 50%;
   width: 15px;
   height: 15px;
   place-self: center;
+  box-shadow: inset 2px 2px 2px 15px rgba(0, 0, 0, 0.1);
 }
 .top{
   grid-row-start: 1;
@@ -71,11 +74,19 @@ body{
   background-color: #59E391;
 }
 .roll-button{
-  background-color: #5035FF;
+  background: linear-gradient(#555353, #363535);
   color: white;
   font-size: 1.2rem;
-  padding: 8px 20px;
+  padding: 8px 32px;
   border: none;
-  border-radius: .3rem;
-  margin-bottom: .5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset 0 6px 1px 0 rgba(0, 0, 0, 0.35),
+  0 5px 5px rgba(0, 0, 0, 0.5), 0 15px 25px rgba(0, 0, 0, 0.35);
+}
+.roll-button:active{
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.35),
+  0 5px 15px rgba(0, 0, 0, 0.5), 0 15px 25px rgba(0, 0, 0, 0.35);
+color: #fff;
+text-shadow: 0 0 5px #219cf3;
 }
