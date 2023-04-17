@@ -105,6 +105,7 @@ function App() {
   return (
     <div className='App'>
       {correct && <Confetti />}
+      <div className="title-wrapper">
       {!start && <h1 className='title'>Dice game</h1>}
       {!start && (
         <p className='instructions'>
@@ -112,6 +113,7 @@ function App() {
           current value between rolls.
         </p>
       )}
+      </div>
       {start && (
         <div className='start-menu'>
           <h1 className='timer'>
