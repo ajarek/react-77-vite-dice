@@ -105,14 +105,14 @@ function App() {
   return (
     <div className='App'>
       {correct && <Confetti />}
-      <div className="title-wrapper">
-      {!start && <h1 className='title'>Dice game</h1>}
-      {!start && (
-        <p className='instructions'>
-          Roll until all dice are the same. Click each die to freeze it at its
-          current value between rolls.
-        </p>
-      )}
+      <div className='title-wrapper'>
+        {!start && <h1 className='title'>Dice game</h1>}
+        {!start && (
+          <p className='instructions'>
+            Roll until all dice are the same. Click each die to freeze it at its
+            current value between rolls.
+          </p>
+        )}
       </div>
       {start && (
         <div className='start-menu'>
